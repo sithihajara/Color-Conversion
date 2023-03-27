@@ -6,30 +6,70 @@ To perform the color conversion between RGB, BGR, HSV, and YCbCr color models.
 Anaconda - Python 3.7
 ## Algorithm:
 ### Step1:
-<br>
+Import cv2 library and upload the image or capture an image.
 
 ### Step2:
-<br>
+Read the saved image using cv2.imread("filename.jpg").
 
 ### Step3:
-<br>
+Convert the image into the given color transformation using cv2.cvtColor(image, cv2.BGR2YCrCb) and similarly for other color formats.
 
 ### Step4:
-<br>
+Split and merge the image using cv2.split(hsv) and cv2.merge([h,s,v])
 
 ### Step5:
-<br>
+Output the image using cv2.imshow("OUTPUT", image)
 
 ## Program:
-```python
-# Developed By:
-# Register Number:
+
+# Developed By:Sithi Hajara I
+# Register Number:212221230102
+
 # i) Convert BGR and RGB to HSV and GRAY
+```
+# BGR TO HSV
+
+import cv2
+image =cv2.imread('horse.jfif')
+cv2.imshow('original',image)
+b_h=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
+cv2.imshow('BGR_HSV',b_h)
+cv2.waitKey(0)
+cv2.destroyAllWindows
 
 
+# BGR TO GRAY
+
+import cv2
+image =cv2.imread('horse.jfif')
+cv2.imshow('original',image)
+b_g=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+cv2.imshow('BGR_GRAY',b_g)
+cv2.waitKey(0)
+cv2.destroyAllWindows
 
 
+# RGB TO HSV
 
+import cv2
+image =cv2.imread('horse.jfif')
+cv2.imshow('original',image)
+r_h=cv2.cvtColor(image,cv2.COLOR_RGB2HSV)
+cv2.imshow('RGB_HSV',r_h)
+cv2.waitKey(0)
+cv2.destroyAllWindows
+
+# RGB TO GRAY
+
+import cv2
+image =cv2.imread('horse.jfif')
+cv2.imshow('original',image)
+r_g=cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
+cv2.imshow('RGB_GRAY',r_g)
+cv2.waitKey(0)
+cv2.destroyAllWindows
+
+```
 # ii)Convert HSV to RGB and BGR
 
 
@@ -51,7 +91,7 @@ Anaconda - Python 3.7
 
 
 
-```
+
 ## Output:
 ### i) BGR and RGB to HSV and GRAY
 <br>
